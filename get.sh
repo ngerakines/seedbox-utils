@@ -18,7 +18,7 @@ FILE=${FILE#* }
 FILE=$(basename $FILE)
 
 echo $FILE
-cat file-?? > $FILE
+cat file-?? > "$FILE"
 
 echo "Done. Match?"
 cat MANIFEST
