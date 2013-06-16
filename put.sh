@@ -13,7 +13,7 @@ if [ ! -f "$FILE" ]; then
         exit 1
 fi
 
-SUM=$(shasum $FILE)
+SUM=$(shasum "$FILE")
 
 cat > MANIFEST << EOF
 $SUM
@@ -24,7 +24,9 @@ echo $SUM
 PREFIX=$(date +%s)
 
 echo "Splitting $FILE"
-split --bytes=134217728 $FILE x
+split --bytes=134217728 "$FILE" x
+
+ls x*
 
 echo "Encrypting MANIFEST"
 gpg --encrypt --recipient $TO MANIFEST
