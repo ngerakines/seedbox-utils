@@ -25,3 +25,12 @@ A script that fetches encrypted parts, decrypts them and pieces them back togeth
     $ get prefixa
     ...
     [gpg password]
+
+# list-available.sh
+
+A script that peaks at the MANIFEST files for all of the uploaded content and displays it.
+
+    $ alias list-available='list-available.sh bucketabcdefg'
+    $ list-available
+    1234567890 superhash /path/to/file
+    2345678901 superhash /path/to/other/file
