@@ -1,5 +1,7 @@
 # seedbox-utils
 
+A collection of utilities to help manage files using s3.
+
 These scripts assume a few things:
 
 * On the "get" side, you created a gpg key.
@@ -32,5 +34,6 @@ A script that peaks at the MANIFEST files for all of the uploaded content and di
 
     $ alias list-available='list-available.sh bucketabcdefg'
     $ list-available
+    [gpg password]
     1234567890 superhash /path/to/file
     2345678901 superhash /path/to/other/file
